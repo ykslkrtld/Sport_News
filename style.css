@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(255, 42, 0);
+}
+
+header{
+    margin: 2rem;
+}
+
+header h1{
+    text-align: center;
+    color: rgb(255, 196, 0);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 0 3rem;
+}
+
+.news{
+    border: none;
+    border-radius: 20px;
+}
+
+img{
+    width: 100%;
+    height: 90%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#uefa{
+    background-color: rgb(255, 196, 0);
+    height: 25rem;
+    grid-area: 1/1/2/2;
+}
+
+#kadikoy{
+    background-color: rgb(255, 196, 0);
+    height: 25rem;
+    grid-area: 1/2/2/3;
+}
+
+#super{
+    background-color: rgb(255, 196, 0);
+    height: 25rem;
+    grid-area: 1/3/2/4;
+}
+
+#cl89{
+    background-color: rgb(255, 196, 0);
+    height: 25rem;
+    grid-area: 2/1/3/2;
+}
+
+#cl01{
+    background-color: rgb(255, 196, 0);
+    height: 25rem;
+    grid-area: 2/2/3/3;
+}
+
+#cl13{
+    background-color: rgb(255, 196, 0);
+    height: 25rem;
+    grid-area: 2/3/3/4;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 42, 0);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.news:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 1s ease;
+}
+
+@media screen and (max-width: 1000px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    #uefa{
+        grid-area: 1/1/2/2;
+        height: 30rem;
+    }
+    
+    #kadikoy{
+        grid-area: 1/2/2/3;
+        height: 30rem;
+
+    }
+    
+    #super{
+        grid-area: 2/1/3/2;
+        height: 30rem;
+
+    }
+    
+    #cl89{
+        grid-area: 2/2/3/3;
+        height: 30rem;
+
+    }
+    
+    #cl01{
+        grid-area: 3/1/4/2;
+        height: 30rem;
+
+    }
+    
+    #cl13{
+        grid-area: 3/2/4/3;
+        height: 30rem;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    #uefa{
+        grid-area: 1/1/2/2;
+    }
+    
+    #kadikoy{
+        grid-area: 2/1/3/2;
+    }
+    
+    #super{
+        grid-area: 3/1/4/2;
+    }
+    
+    #cl89{
+        grid-area: 4/1/5/2;
+    }
+    
+    #cl01{
+        grid-area: 5/1/6/2;
+    }
+    
+    #cl13{
+        grid-area: 6/1/7/2;
+    }
+
+    a{
+        font-size: 1.3rem;
+    }
+}
